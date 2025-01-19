@@ -1,0 +1,550 @@
+/* Definir cores */
+
+:root {
+    --fundo: #141414;
+    --branco: rgb(230, 247, 253);
+}
+
+/* Definir estilos gerais */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto-regular";
+}
+
+body {
+    background-color: var(--fundo);
+    overflow-x: hidden;
+}
+
+/* Importar Fontes */
+
+@font-face {
+    font-family: Roboto-regular;
+    src: url(fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: Roboto-bold;
+    src: url(fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: Roboto-light;
+    src: url(fonts/Roboto-Light.ttf);
+}
+
+/* Definir estilo do scroll */
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* Inicio Faixa Superior */
+.faixa-superior {
+    width: 100vw;
+    height: 68px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.774) 0%, rgba(0, 0, 0, 0) 100%);
+    position: absolute;
+    z-index: 1;
+}
+
+/* Final Faixa Superior */
+
+/* Inicio Navbar */
+nav {
+    width: 100vw;
+    height: 68px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.774) 0%, rgba(0, 0, 0, 0) 100%);
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.esquerda-navbar {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.esquerda-navbar img {
+    width: 13vw;
+}
+
+.direita-navbar {
+    display: flex;
+    margin-left: auto;
+    margin-right: 50px;
+    gap: 20px;
+}
+
+.direita-navbar img {
+    width: 2vw;
+}
+
+.img-usuario-navbar {
+    border-radius: 100px;
+}
+
+/* Estilo Mobile */
+@media (orientation:portrait) {
+    .esquerda-navbar {
+        margin-left: 20px;
+    }
+
+    .esquerda-navbar img {
+        width: 50vw;
+    }
+
+    .direita-navbar {
+        margin-right: 20px;
+    }
+
+    .direita-navbar img {
+        display: none;
+        width: 9vw;
+    }
+
+    .img-usuario-navbar {
+        display: block !important;
+    }
+}
+
+/* Final Navbar */
+
+/* Inicio Login */
+
+.titulo-login h1 {
+    color: var(--branco);
+    font-weight: bold;
+    text-align: center;
+    font-size: 3vw;
+}
+
+.perfil-login {
+    position: absolute;
+    display: grid;
+    gap: 0px;
+    align-items: center;
+    height: 100vh;
+    width: 90vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.div-faccao-login {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    gap: 5vw;
+}
+
+.faccao-login {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 3px solid var(--branco);
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: 0.3s;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.faccao-login:hover {
+    background-color: var(--branco);
+    bottom: 20px;
+}
+
+.faccao-login-ativa {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 3px solid var(--branco);
+    background-color: var(--branco);
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: 0.3s;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.faccao-login-ativa img {
+    filter: invert(1);
+    display: flex;
+    margin: auto;
+    max-width: 100%;
+}
+
+.faccao-login-ativa:hover {
+    bottom: 20px;
+}
+
+.faccao-login img {
+    object-fit: contain;
+    display: flex;
+    margin: auto;
+    max-width: 100%;
+    transition: 0.3s;
+}
+
+.faccao-login:hover img {
+    filter: invert(1);
+}
+
+.div-perfis-login {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    gap: 50px;
+}
+
+.perfil {
+    display: grid;
+    gap: 20px;
+}
+
+.img-perfil {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 100%;
+    cursor: pointer;
+    bottom: 0;
+    position: relative;
+    transition: 0.3s;
+}
+
+.perfil:hover .img-perfil {
+    bottom: 15px;
+}
+
+.nome-perfil {
+    color: var(--branco);
+    opacity: 50%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.perfil:hover .nome-perfil {
+    opacity: 1;
+}
+
+#div-imperio {
+    display: none;
+}
+
+/* Estilo Mobile */
+
+@media (orientation:portrait) {
+
+    .perfil-login {
+        top: 65%;
+        gap: 30px;
+    }
+
+    .titulo-login h1 {
+        font-size: 7vw;
+    }
+
+    .div-perfis-login {
+        flex-wrap: wrap;
+    }
+
+    .img-perfil {
+        width: 125px;
+    }
+
+    .nome-perfil {
+        font-size: 15px;
+    }
+
+    .faccao-login {
+        width: 100px;
+        height: 100px;
+    }
+
+    .faccao-login-ativa {
+        width: 100px;
+        height: 100px;
+    }
+
+    .faccao-login-ativa:hover {
+        bottom: 0px;
+    }
+
+    #faccao-login-imperio img {
+        width: 65px;
+    }
+}
+
+/* Final Login */
+
+/* Index */
+
+.barra-fundo-principal {
+    width: 100vw;
+    height: 10vh;
+    background: linear-gradient(0deg, rgba(20, 20, 20, 1) 30%, rgba(20, 20, 20, 0) 100%);
+    position: relative;
+    bottom: 72px;
+}
+
+.elementos-principal {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-5%, -50%);
+    display: grid;
+    gap: 30px;
+}
+
+#imagem-filme-principal {
+    max-width: 100%;
+}
+
+#imagem-filme-principal-mobile {
+    display: none;
+}
+
+#video-filme {
+    max-width: 100%;
+}
+
+.botao-assistir-principal {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    gap: 30px;
+    width: 20vw;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.botao-assistir-principal:hover {
+    opacity: 60%;
+}
+
+.botao-assistir-principal img {
+    width: 25px !important;
+}
+
+.elementos-principal img {
+    width: 20vw;
+}
+
+.logo-filme {
+    filter: drop-shadow(0 0 0.75rem black);
+}
+
+.elementos-principal p {
+    color: white;
+    font-size: 120%;
+    width: 30vw;
+    margin-bottom: 0;
+}
+
+.ativar-som {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translate(-100%, -50%);
+    width: 12vw;
+    background-color: #57575675;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: surgir-som 0.3s;
+}
+
+@keyframes surgir-som {
+    0% {
+        transform: translate(-0%, -50%);
+    }
+
+    100% {
+        transform: translate(-100%, -50%);
+    }
+}
+
+.ativar-som:hover {
+    background-color: #575756;
+}
+
+.ativar-som h3 {
+    margin-bottom: 0;
+    text-align: end;
+    color: white;
+    font-size: 1.0vw;
+    margin-left: 15px;
+}
+
+@media (orientation:portrait) {
+    #imagem-filme-principal {
+        display: none !important;
+    }
+
+    #imagem-filme-principal-mobile {
+        display: block;
+        width: 100vw;
+        height: 90vh;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    #video-filme {
+        display: none !important;
+    }
+
+    .ativar-som {
+        display: none !important;
+    }
+
+    .barra-fundo-principal {
+        bottom: 60px;
+    }
+
+    .elementos-principal p {
+        display: none;
+    }
+
+    .elementos-principal {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -70%);
+        display: grid;
+        gap: 30px;
+    }
+
+    .elementos-principal img {
+        width: 65vw;
+    }
+
+    .botao-assistir-principal {
+        width: 100%;
+    }
+
+    .lista-filmes-pai{
+        top: 145%;
+    }
+
+    .poster-filme{
+        display: none;
+    }
+
+    .poster-filme-mobile{
+        display: block !important;
+    }
+
+    .poster-div img {
+        width: 35vw !important;
+    }
+}
+
+/* Lista de filmes */
+
+.lista-filmes-pai {
+    position: absolute;
+    top: 145% !important;
+    left: 3%;
+    transform: translate(0%, -135%);
+    display: grid;
+    gap: 20px;
+}
+
+.titulo-lista {
+    color: white;
+    font-family: "Roboto-Bold";
+    font-size: 30px;
+}
+
+.lista-filmes {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    padding-right: 50px;
+}
+
+.lista-filmes::-webkit-scrollbar {
+    height: 7px;
+    width: 80%;
+}
+
+.lista-filmes::-webkit-scrollbar-track {
+    background-color: #141414;
+}
+
+.lista-filmes::-webkit-scrollbar-thumb {
+    background-color: #252525;
+}
+
+.lista-filmes::-webkit-scrollbar-thumb:hover {
+    background-color: #575756;
+}
+
+.poster-div img {
+    width: 20vw;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.poster-div img:hover {
+    transform: scale(0.9);
+}
+
+/* Final Index */
+
+/* Filme */
+
+.dados-filmes {
+    position: relative;
+    top: -90vh;
+    left: 50px;
+}
+
+.principal-filme {
+    color: white;
+}
+
+.principal-filme img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.voltar{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: var(--branco);
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.voltar i{
+    display: flex;
+    margin: auto;
+}
+
+/* Final Filme */
