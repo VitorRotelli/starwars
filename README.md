@@ -1,5 +1,5 @@
 <div style="text-align: center;margin-bottom:50px">
-  <img src="src/img/logo/Logo.png" alt="Seu Logotipo" width="500">
+  <img src="src/img/logo/Logo.png" alt="Logotipo" width="500">
 </div>
 
 # 💬 Teste para empresa L5
@@ -23,7 +23,7 @@ Independente do resultado, agradeço pela confiança e pelo tempo dedicado à an
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repo.git
+   git clone https://github.com/VitorRotelli/starwars
    cd nome-do-repo
 
 
