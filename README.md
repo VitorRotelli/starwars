@@ -24,7 +24,6 @@ Independente do resultado, agradeço pela confiança e pelo tempo dedicado à an
 1. Clone o repositório:
    ```bash
    git clone https://github.com/VitorRotelli/starwars.git
-   cd nome-do-repo
 
 
 ## 🛠️ Tecnologias Utilizadas
